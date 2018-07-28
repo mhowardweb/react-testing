@@ -1,12 +1,18 @@
 import React from 'react';
 import { mount } from 'enzyme'; //Full DOM API
 import CommentBox from 'components/CommentBox';
+import Root from 'Root'; //Redux store is in this helper function to help with testing
+
 // component is a virtual component used by enzyme
 let component;
 
 // runs before every it statement
 beforeEach(() => {
-  component = mount(<CommentBox />);
+  component = mount(
+    <Root>
+      <CommentBox />
+    </Root>
+  );
 });
 
 // runs after every it statement
