@@ -20,9 +20,9 @@ afterEach(() => {
   component.unmount(); // unmounts the component after each test to stop DOM issues
 })
 
-it('has a text area and a button', () => {
+it('has a text area and two buttons', () => {
   expect(component.find('textarea').length).toEqual(1); //find 1 textarea element
-  expect(component.find('button').length).toEqual(1); //find 1 button element 
+  expect(component.find('button').length).toEqual(2); //find 1 button element 
 
 });
 
